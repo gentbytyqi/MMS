@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Manhole, Pipe, CollectorPoint, DischargePoint
+from .models import Manhole, Pipe, CollectorPoint, DischargePoint, WorkOrder
 
 class ManholeSerializer(serializers.ModelSerializer):
     class Meta:
@@ -19,4 +19,9 @@ class CollectorPointSerializer(serializers.ModelSerializer):
 class DischargePointSerializer(serializers.ModelSerializer):
     class Meta:
         model = DischargePoint
+        fields = '__all__'
+
+class WorkOrderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = WorkOrder
         fields = '__all__'
